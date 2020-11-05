@@ -22,6 +22,10 @@ namespace XMLSerialization
         [XmlElement("Employee Software")]
         public int Software { get; set; }
 
+        [XmlIgnore]
+        public String CurrentProject { get; set; }
+
+        [XmlElement("Employee StartDate")]
         public DateTime EntryDate {get; set;}
     }
 }
