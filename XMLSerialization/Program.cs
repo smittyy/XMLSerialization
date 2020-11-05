@@ -5,13 +5,14 @@ using System.IO;
 
 namespace XMLSerialization
 {
+
     class Program
     {
         static void Main(string[] args)
         {
             Employee Josh = new Employee();
 
-            Josh.Name = "Josh Willy";
+            Josh.Name = "Conner Smith";
             Josh.Speed = 4;
             Josh.Design = 50;
             Josh.Research = 70;
@@ -21,7 +22,7 @@ namespace XMLSerialization
             Console.WriteLine($"His name is {Josh.Name}, his speed is {Josh.Speed}. \nHis Disign, Research, and Software are {Josh.Design}, {Josh.Research}, {Josh.Software} is that order. \nHe joined on {Josh.EntryDate}");
 
             string FilePath = "C:/Users/Smith_Conner/Desktop/C#/Serialization/XMLSerialization/XMLSerialization/bin/Debug/";
-            string FileName = "Serial.xml";
+            string FileName = "SerialNumberTwo.xml";
             XmlSerializer nuke = new XmlSerializer(typeof(Employee));
             using (TextWriter ser = new StreamWriter(FilePath + FileName, append: false))
             {
